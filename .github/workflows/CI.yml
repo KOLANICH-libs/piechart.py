@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: tezt
+        uses: KOLANICH-GHActions/test@master
+
+      - name: passthrough restricted action vars
+        uses: KOLANICH-GHActions/passthrough-restricted-actions-vars@master
+
+      - name: typical python workflow
+        uses: KOLANICH-GHActions/typical-python-workflow@master
