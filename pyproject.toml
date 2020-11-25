@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piechart"
+authors = [{name = "KOLANICH"}]
+description = "A damn damn damn small and simple pie chart library without any dependencies."
+readme = "ReadMe.md"
+keywords = ["piechart"]
+license = {text = "Unlicense"}
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+urls = {Homepage = "https://codeberg.org/KOLANICH-libs/piechart.py"}
+requires-python = ">=3.4"
+dynamic = ["version"]
+
+[tool.setuptools]
+zip-safe = true
+py-modules = ["piechart"]
+
+[tool.setuptools_scm]
